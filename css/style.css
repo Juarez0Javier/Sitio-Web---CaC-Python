@@ -83,22 +83,42 @@ nav a:hover {
 }
 
 
+body {
+    background-color: #fbf4ef;
+}
 
 
 
 footer {
+    background-color: #241609;
+    padding: 20px;
     display: grid;
     grid-template-columns: auto auto auto;
-    position:absolute;   
-    left: 0;
-    width: 100%;
-    background-color: #1b1a1a;
-    color: rgb(221, 221, 223);
+    gap: 30px;
+    align-items: center;
+    text-align: center;
 }
 
-#map {
+footer p {
+    margin: 0;
+    color: #e4d6c9;
+    font-size: 16px;
+}
+
+iframe#map {
     grid-column: 1 / span 3;
-    width: 100%;
+    width: 80%;
     height: 250px;
-    border: 0;    
+    margin: auto;
+    display: block;
+}
+
+.direccion {
+    grid-column: 1 / span 3;
+}
+
+
+
+.espacio {
+    margin: 600px;
 }
