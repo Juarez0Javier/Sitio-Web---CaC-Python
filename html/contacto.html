@@ -58,9 +58,21 @@
                         <input id="Mail" type="text">
                     </div>
 
-                    <div class="entry">
+                    <div></div>
+
+                    <div class="entry" style="grid-column: 1 / span 2;">
+
                         <label for="Motivo"> Motivo </label><br>
-                        <input id="Motivo" type="text">
+                        <fieldset id="Motivo" style="border-color: rgb(228, 219, 178);">
+                            <input id="Queja" type="checkbox">
+                            <label for="Queja"> Queja sobre el sistema </label>
+                            <input id="Consulta" type="checkbox">
+                            <label for="Consulta"> Consulta sobre los productos</label>
+                            <input id="Otro" type="checkbox">
+                            <label for="Otro">
+                                <input class="textbox" id="Motivo" type="text" style="width:300px" placeholder="Otro motivo"> 
+                            </label>
+                        </fieldset>
                     </div>
 
                     <div class="entry" style="grid-column: 1 / span 2;">
