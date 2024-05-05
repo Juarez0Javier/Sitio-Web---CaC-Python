@@ -21,7 +21,7 @@
     grid-template-columns: repeat(2, auto);
 }
 
-.entry>input {
+.textbox {
     width: 100%;
 
     font-size: 15px;
