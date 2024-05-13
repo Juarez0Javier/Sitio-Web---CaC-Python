@@ -37,11 +37,42 @@
         </nav>
     </header>
 
+    <script>
+        function Validate_Form(){
+            var nom = document.consulta.Nombre.value;
+            var ape = document.consulta.Apellido.value;
+            var mail = document.consulta.Mail.value;
+            var queja = document.consulta.Queja.checked;
+            var con = document.consulta.Consulta.checked;
+            var otro = document.consulta.Otro.checked;
+            var otrotxt = document.consulta.Otro_Texto.value;
+            var msj = document.consulta.Mensaje.value;
+
+            var almsj="No se completron los campos de";
+
+            if(!nom)
+                almsj+=" Nombre";
+            if(!ape)
+                almsj+=" Apellido";
+            if(!mail)
+                almsj+=" Mail";
+            if(!(queja || con || (otro && otrotxt)))
+                almsj+=" Motivo";
+            if(!msj)
+                almsj+=" Mensaje";
+
+            if(almsj!="No se completron los campos de")
+            {
+            alert(almsj);
+            return false;
+            }
+        }
+    </script>
 
     <main>
         <p id="form-title">Complete los siguientes campos y reponderemos su consulta a la brevedad!</p>
         <div class="consultas">
-            <form>
+            <form name="consulta" onsubmit="return Validate_Form()">
                 <div class="grid-con">
                     <div class="entry">
                         <label for="Nombre"> Nombre </label> <br>
@@ -63,14 +94,14 @@
                     <div class="entry" style="grid-column: 1 / span 2;">
 
                         <label for="Motivo"> Motivo </label><br>
-                        <fieldset id="Motivo" style="border-color: rgb(228, 219, 178);">
-                            <input id="Queja" type="checkbox">
+                        <fieldset id="Motivo" style="border: 0;">
+                            <input name="motivo_radio" id="Queja" type="radio" value="queja">
                             <label for="Queja"> Queja sobre el sistema </label> <br>
-                            <input id="Consulta" type="checkbox">
+                            <input name="motivo_radio" id="Consulta" type="radio" value="consulta">
                             <label for="Consulta"> Consulta sobre los productos</label> <br>
-                            <input id="Otro" type="checkbox">
+                            <input name="motivo_radio" id="Otro" type="radio" value="otro">
                             <label for="Otro">
-                                <input class="textbox" id="Motivo" type="text" style="width:300px" placeholder="Otro motivo"> 
+                                <input class="textbox" id="Otro_Texto" type="text" style="width:300px" placeholder="Otro motivo"> 
                             </label>
                         </fieldset>
                     </div>
