@@ -88,7 +88,7 @@ body {
 }
 
 
-
+/*footer*/
 footer {
     background-color: #241609;
     padding: 20px;
@@ -119,15 +119,13 @@ iframe#map {
 
 
 
-.espacio {
-    margin: 70px;
-}
+
 /*parte de productos*/
 
 #productos{
     height: 350px;
     margin: 2%;
-    display: flex;/*flex padre q afecta a los hijos*/
+    display: flex; /*flex padre q afecta a los hijos*/
     border: none;
     /*flex-direction: column;*/
     justify-content: space-evenly;
@@ -144,7 +142,7 @@ iframe#map {
     height: 100%;
     background-color: rgb(252, 177, 79);
     border: 1px solid #000000;
-    flex: 1;/*tengan todo el width posible equitativamente*/
+    flex: 1; /*tengan todo el width posible equitativamente*/
 }
 .article{
     display: flex;
@@ -172,4 +170,5 @@ iframe#map {
   .precio {
     margin: 5px 0;
   }
+
 /*----------*/
