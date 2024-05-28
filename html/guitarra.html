@@ -6,9 +6,16 @@
     <title>Producto</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/producto_individual.css">
-    <script src="https://kit.fontawesome.com/4e5d6fb4ca.js" crossorigin="anonymous"></script>
-</head>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <script src="https://kit.fontawesome.com/4e5d6fb4ca.js" crossorigin="anonymous"></script>
+
+</head>
 <body>
     
     <div class="secondary-header">
@@ -16,89 +23,123 @@
           <span><h3>Envío gratis en compras a partir de $30.000</h3></span>
         </div>
     </div>
-    
-    <header id="header">  
-        <div class="logo">
-            <a href="./index.html"> <img src="../img/logo.png" alt="logo" class="img-logo"></a>
+
+    <header id="header"> 
+        <div class="logo_box">
+            <a href="./index.html">
+                <img src="../img/logo.png" alt="logo" class="img-logo">
+            </a>
         </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar...">
+            <button type="submit">Buscar</button>
+        </div>
+
         <nav class="navbar">
             <ul>
-                <li><a href="./index.html">Inicio</a></li>
-                <li><a href="./productos.html">Productos</a></li>
-                <li><a href="./informacion.html">Información</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
+                <li class="enlace_1"><a href="./index.html">Inicio</a></li>
+                <li class="enlace_2"><a href="./productos.html">Productos</a></li>
+                <li class="enlace_3"><a href="./informacion.html">Información</a></li>
+                <li class="enlace_4"><a href="./contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-
         <section id="one">
+
             <div class="picture">
-                <img src="../img/guitarra.png" alt="guitarra">
+                <img src="../img/guitarra.png" alt=""> 
             </div>
 
-            <div class="pre_buy">
-                <form class="form_pre_buy" action="" method="get">
+            <div class="info_principal">
+                <div class="title">
                     <h2>Guitarra Acústica Star 38" Color Madera Parque</h2>
-                    <h2>Precio: $420.000</h2>
-                    <div class="boton_cant">
-                        <label for="cant">Cantidad: </label>
-                        <input id="cant" type="number" value="cantidad" min="1" max="10" name="cantidad">
-                    </div>
-                    <fieldset class="metodo_pago">
-                        <legend><label for="metodo">Metodo de pago: </label></legend>
-                        <label for="tarjeta">Tarjeta</label> 
-                        <input id="tarjeta" type="radio" name="metodo" value="tarjeta">
-                        <label for="mercadoP">Mercado Pago</label>
-                        <input id="mercadoP" type="radio" name="metodo" value="mercadoP">
-                        <label for="local">En local (2hrs despues de la compra)</label>
-                        <input id="local" type="radio" name="metodo" value="local">
-                    </fieldset>
-                    <div class="botones">
+                </div>
+                
+                <fieldset class="dinero">
+                    <legend>Precio</legend>
+                    <h2>270.000$</h2>
+                    <legend>12 cuotas sin interes de </legend>
+                    <h2>23.000$ <a href="#" class="cuotas">Ver cuotas</a></h2>
+                </fieldset>
+
+                <div class="otros">
+                    <h2>Garantia de 12 meses  <i class='bx bx-check-shield bx-tada-hover'></i></h2> 
+                    <h2>Stock disponible: <i class='bx bx-check-square' ></i></h2>
+                    <h2>Envios a todo el pais <i class='bx bxs-truck bx-fade-right-hover'></i></h2>
+                </div>
+                
+                <form class="botones" action="" method="get">
                         <input type="submit" value="COMPRAR" class="boton_compra">
-                        <input type="submit" value="CARRITO" class="boton_carrito">
-                    </div>
+                        <input type="submit" value="AÑADIR AL CARRITO" class="boton_carrito">
                 </form>
             </div>
         </section>
-
-        <h2 class="descripcion">Descripcion:</h2>
+        
         <section id="two">
-            <P>La guitarra es un instrumento versátil y expresivo que ha sido fundamental en la música durante siglos. Además de sus características físicas, como el cuerpo, el mástil y las cuerdas, hay elementos adicionales que contribuyen a su sonido y personalidad.
-                Tipo de guitarra: Existen varios tipos de guitarras, cada una con su propio sonido distintivo y estilo de juego. Algunos ejemplos incluyen la guitarra acústica de cuerpo sólido, la guitarra clásica con cuerdas de nylon, la guitarra eléctrica con pastillas magnéticas para amplificar el sonido, la guitarra resonadora con un cono metálico para mayor proyección, y la guitarra de doce cuerdas que produce un sonido más rico y completo.
+            <h2 >Descripcion:</h2>
+            <P>La guitarra es un instrumento versátil y expresivo que ha sido fundamental en la música durante siglos. Además de sus características físicas, como el cuerpo, el mástil y las cuerdas, hay elementos adicionales que contribuyen a su sonido y personalidad. Tipo de guitarra: Existen varios tipos de guitarras, cada una con su propio sonido distintivo y estilo de juego. Algunos ejemplos incluyen la guitarra acústica de cuerpo sólido, la guitarra clásica con cuerdas de nylon, la guitarra eléctrica con pastillas magnéticas para amplificar el sonido, la guitarra resonadora con un cono metálico para mayor proyección, y la guitarra de doce cuerdas que produce un sonido más rico y completo.
                 Componentes adicionales: Además de las partes principales como el cuerpo y el mástil, la guitarra puede tener varios componentes adicionales. Estos incluyen el diapasón, donde se colocan los trastes para cambiar la afinación de las cuerdas, los trastes mismos, que dividen el diapasón en segmentos para producir diferentes notas al presionar las cuerdas, y el puente, que sostiene las cuerdas en su lugar y ayuda a transmitir la vibración al cuerpo de la guitarra.
-                Sonido y tono: El tipo de madera utilizada en la construcción de una guitarra puede afectar significativamente su sonido y tono. Por ejemplo, la caoba tiende a producir un tono cálido y resonante, mientras que el arce puede ofrecer un tono más brillante y nítido. Otros factores que influyen en el sonido incluyen la forma del cuerpo, el grosor de las cuerdas y el tipo de pastillas en el caso de las guitarras eléctricas.
-                Estilo de tocar: La guitarra se toca de diversas maneras, desde rasgueos vigorosos hasta delicados arpegios. Los guitarristas pueden utilizar una variedad de técnicas, como el picking, el fingerpicking, los bendings, los hammer-ons y los pull-offs, para crear diferentes efectos y expresiones musicales.
-                En resumen, la guitarra es mucho más que un simple instrumento musical. Es una herramienta de expresión artística que ha capturado la imaginación de músicos y oyentes de todo el mundo. Desde sus orígenes hasta su evolución moderna, la guitarra continúa siendo un símbolo de creatividad y pasión en la música.</P>
+                Sonido y tono: El tipo de madera utilizada en la construcción de una guitarra puede afectar significativamente su sonido y tono. Por ejemplo, la caoba tiende a producir un tono cálido y resonante, mientras que el arce puede ofrecer un tono más brillante y nítido. Otros factores que influyen en el sonido incluyen la forma del cuerpo, el grosor de las cuerdas y el tipo de pastillas en el caso de las guitarras eléctricas. Estilo de tocar: La guitarra se toca de diversas maneras, desde rasgueos vigorosos hasta delicados arpegios. Los guitarristas pueden utilizar una variedad de técnicas, como el picking, el fingerpicking, los bendings, los hammer-ons y los pull-offs, para crear diferentes efectos y expresiones musicales. En resumen, la guitarra es mucho más que un simple instrumento musical. Es una herramienta de expresión artística que ha capturado la imaginación de músicos y oyentes de todo el mundo. Desde sus orígenes hasta su evolución moderna, la guitarra continúa siendo un símbolo de creatividad y pasión en la música.
+            </P>
         </section>
-
-        <h2 class="recomendaciones">Recomendaciones: </h2>
+        <h2 id="threeRe">Recomendaciones: </h2>
         <section id="three">
-            <a href="bateria.html">
+            
+            <a href="" target="_blank">
                 <article class="article">
                     <img class="miniatura" src="../img/bateria.png" alt="" >
                     <div class="contenido">
-                        <h3 class="titulo">Batería</h3>
-                        <p class="precio">$800.000</p>
+                            <h3 class="titulo_miniatura">Título del Artículo1</h3>
+                            <p class="precio_miniatura">Precio1$</p>
                     </div>
                 </article>
             </a>
-            <a href="trompeta.html">
+            <a href="" target="_blank">
                 <article class="article">
                     <img class="miniatura" src="../img/trompeta.png" alt="" >
                     <div class="contenido">
-                        <h3 class="titulo">Trompeta</h3>
-                        <p class="precio">$120.000</p>
+                            <h3 class="titulo_miniatura">Título del Artículo2</h3>
+                            <p class="precio_miniatura">Precio2$</p>
                     </div>
                 </article>
             </a>
-            <a href="violin.html">
+            <a href="" target="_blank">
                 <article class="article">
                     <img class="miniatura" src="../img/violin.png" alt="" >
                     <div class="contenido">
-                        <h3 class="titulo">Violín</h3>
-                        <p class="precio">$520.000</p>
+                            <h3 class="titulo_miniatura">Título del Artículo3</h3>
+                            <p class="precio_miniatura">Precio3$</p>
+                    </div>
+                </article>
+            </a>
+            
+            <a href="" target="_blank">
+                <article class="article">
+                    <img class="miniatura" src="../img/teclado.png" alt="" >
+                    <div class="contenido">
+                            <h3 class="titulo_miniatura">Título del Artículo4</h3>
+                            <p class="precio_miniatura">Precio4$</p>
+                    </div>
+                </article>
+            </a>
+            <a href="" target="_blank">
+                <article class="article">
+                    <img class="miniatura" src="../img/bajo.png" alt="" >
+                    <div class="contenido">
+                            <h3 class="titulo_miniatura">Título del Artículo4</h3>
+                            <p class="precio_miniatura">Precio4$</p>
+                    </div>
+                </article>
+            </a>
+            <a href="" target="_blank">
+                <article class="article">
+                    <img class="miniatura" src="../img/chelo.png" alt="" >
+                    <div class="contenido">
+                            <h3 class="titulo_miniatura">Título del Artículo4</h3>
+                            <p class="precio_miniatura">Precio4$</p>
                     </div>
                 </article>
             </a>
@@ -112,7 +153,5 @@
                 href="https://www.youtube.com/" target=”_blank”><i class="fa-brands fa-youtube fa-2x"></i></a></p><br>
         <p>© 2024 Crescendo </p>
     </footer>
-
 </body>
-
 </html>
