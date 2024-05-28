@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const carruselBotonSiguiente = document.querySelector(".carrusel-siguiente");
 
     let posicionActual = 0;
-    const anchoElemento = carruselContenedor.children[0].offsetWidth;
+    const anchoElemento = carruselContenedor.children[0].offsetWidth+40;
     const cantidadElementos = carruselContenedor.children.length;
 
     carruselBotonAnterior.addEventListener("click", () => {
@@ -15,14 +15,15 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     carruselBotonSiguiente.addEventListener("click", () => {
-        if (posicionActual < cantidadElementos - 1) {
+        if (posicionActual < cantidadElementos - 3) {
             posicionActual++;
             actualizarCarrusel();
         }
     });
-
+    
     function actualizarCarrusel() {
         const desplazamiento = -posicionActual * anchoElemento;
         carruselContenedor.style.transform = `translateX(${desplazamiento}px)`;
     }
+    
 });

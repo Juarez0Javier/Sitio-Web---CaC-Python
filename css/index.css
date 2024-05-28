@@ -57,6 +57,7 @@ h2 {
     width: 100%;
     overflow: hidden;
     margin: 10px 40px 40px 40px;
+    z-index: 1;
 }
 
 .carrusel-contenedor {
@@ -73,7 +74,6 @@ h2 {
     border-radius: 10px;
     padding: 10px;
     overflow: hidden;
-
 }
 
 .imgcard {
@@ -93,7 +93,7 @@ h2 {
     font-size: 24px;
     padding: 15px;
     cursor: pointer;
-    z-index: -1;
+    z-index: 0;
 }
 
 .carrusel-boton:hover {
