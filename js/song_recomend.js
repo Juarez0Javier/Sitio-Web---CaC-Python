@@ -43,8 +43,6 @@ fetch("https://api.lyrics.ovh/v1/" + Artista + "/" + Titulo)
 )
 .catch(error=>console.log(error));
 
-
-
 function Create_Couplet(N,LetraArray)
 {
     var i;

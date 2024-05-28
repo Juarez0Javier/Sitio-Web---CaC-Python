@@ -1,6 +1,6 @@
 function Validate_Form() {
 
-    var almsj = "No se completron los campos de";
+    var almsj = "No se completron los campos de: ";
 
     if (!document.consulta.Nombre.value)
         almsj += " Nombre";
