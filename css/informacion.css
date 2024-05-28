@@ -4,6 +4,7 @@
 }
 
 .informacion h2 {
+    margin-top: 40px;
     margin-bottom: 20px; 
     font-size: 30px;
 }
@@ -11,6 +12,72 @@
 .informacion p {
     margin-bottom: 10px; 
     font-size: 20px;
+}
+
+
+/* container con informacion */
+.container-info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    padding: 5px;
+}
+
+.info-uno, .info-dos, .info-tres, .info-cuatro {
+    padding: 1rem;
+    height: 3rem;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #44270b;
+    color: #f8f0df; 
+    font-size: larger;
+}
+
+.info-uno:hover, .info-dos:hover, .info-tres:hover, .info-cuatro:hover {
+    height: 14rem;
+    background-color: #EDDAB5;
+    color: #241609; 
+}
+
+h1, h2, p {
+    text-align: center;
+    color: #241609; 
+    line-height: 1.5;
+}
+
+h3 {
+    padding-bottom: 0.2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .container-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .info-uno, .info-dos, .info-tres, .info-cuatro {
+        height: auto;
+        transition: none;
+    }
+    .info-tres, .info-cuatro {
+        margin-top: 5px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .container-gral {
+        padding: 4rem 1.25rem;
+    }
+    .container-info {
+        grid-template-columns: 1fr;
+    }
+    .info-uno, .info-dos, .info-tres, .info-cuatro {
+        height: auto;
+        transition: none;
+    }
+    .info-tres, .info-cuatro {
+        margin-top: 5px;
+    }
 }
 
 .btn-contacto {

@@ -1,32 +1,24 @@
 .consultas {
     font-size: 17px;
     color: rgb(53, 52, 52);
-
     width: 70vw;
     margin: 25px auto;
     padding: 25px;
-
     border-radius: 15px;
-
     background-color: #f0a365;
-
 }
 
 .grid-con {
     display: grid;
-
     column-gap: 30px;
     row-gap: 30px;
-
     grid-template-columns: repeat(2, auto);
 }
 
 .textbox {
     width: 100%;
-
     font-size: 15px;
     height: 22px;
-
     border-radius: 5px;
     border: 0px;
     background-color: rgb(231, 231, 231);
@@ -34,20 +26,15 @@
 
 #form-button {
     cursor: pointer;
-
     grid-column: 1 / span 2;
-
     position: relative;
     left: 42%;
     width: 95px;
     height: 50px;
     border-radius: 30px;
-
     background-color: #5c554d;
     color: white;
-
     transition: 0.3s;
-
     border: 0px;
     font-size: 17px;
 }
@@ -58,9 +45,9 @@
 }
 
 #form-title {
+    margin-top: 120px;
     text-align: center;
     font-size: 30px;
     font-weight: 100;
-
     padding: 10px 0px 25px 0px;
 }
