@@ -1,10 +1,10 @@
 .intro {
-    padding: 40px; 
+    padding: 40px;
     text-align: center;
 }
 
 .intro h1 {
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
 .intro p {
@@ -13,7 +13,7 @@
 }
 
 main {
-    padding-top: 20px; 
+    padding-top: 20px;
 }
 
 
@@ -24,7 +24,7 @@ main {
 }
 
 .search-bar input[type="text"] {
-    width: 300px; 
+    width: 300px;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -34,8 +34,8 @@ main {
 
 .search-bar button[type="submit"] {
     padding: 10px 20px;
-    background-color: #241609; 
-    color: #e4d6c9; 
+    background-color: #241609;
+    color: #e4d6c9;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -74,7 +74,7 @@ h2 {
     border-radius: 10px;
     padding: 10px;
     overflow: hidden;
-    
+
 }
 
 .imgcard {
@@ -107,5 +107,32 @@ h2 {
 
 .carrusel-boton.carrusel-siguiente {
     right: 10px;
+}
+
+/* Recomendacion */
+
+.Recommend {
+    border-radius: 12px;
+    background-color: #d6c562;
+    margin: 12px;
+    padding: 12px;
+    color: #383838;
+}
+
+#Lyrics {
+    display: grid; 
+    grid-template-columns: 30% 30% 30%; 
+    grid-column: 1 /span 3; 
+    padding-left: 25%; 
+    column-gap: 30px;
+    row-gap: 30px;
+}
+ 
+#Title{
+    font-weight: bold;
+}
+
+#Couplet {
+    font-style: italic;
 }
 

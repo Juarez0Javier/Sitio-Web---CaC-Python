@@ -92,31 +92,22 @@ body {
 footer {
     background-color: #241609;
     padding: 20px;
-    display: grid;
+    /*display: grid;
     grid-template-columns: auto auto auto;
     gap: 30px;
     align-items: center;
-    text-align: center;
+    text-align: center;*/
 }
 
 footer p {
     margin: 0;
     color: #e4d6c9;
-    font-size: 16px;
+    font-size: 17px;
 }
 
-iframe#map {
-    grid-column: 1 / span 3;
-    width: 80%;
-    height: 250px;
-    margin: auto;
-    display: block;
+#Socials>a{
+    color: #ffffff;
 }
-
-.direccion {
-    grid-column: 1 / span 3;
-}
-
 
 
 
