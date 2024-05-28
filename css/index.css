@@ -52,7 +52,7 @@ h2 {
 
 /* Carrusel */
 .carrusel {
-    position: relative;
+    position: static; 
     width: 100%;
     overflow: hidden;
     margin-bottom: 40px;
