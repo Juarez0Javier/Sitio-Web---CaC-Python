@@ -15,6 +15,7 @@
 }
 
 
+/* container con informacion */
 .container-info {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -78,8 +79,6 @@ h3 {
         margin-top: 5px;
     }
 }
-
-
 
 .btn-contacto {
     display: inline-block;
