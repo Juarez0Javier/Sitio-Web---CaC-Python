@@ -10,6 +10,7 @@ i{
     color: rgb(61, 61, 61);
     transition: 0.2s all;
 }
+
 i:hover{
     color: green;
 }
@@ -46,6 +47,7 @@ i:hover{
     max-width: 500px;
     height: 100%;
 }
+
 .info_principal{
     margin-top: 5px;
     justify-self: stretch;
