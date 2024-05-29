@@ -33,8 +33,6 @@ fetch("https://api.lyrics.ovh/v1/" + Artista + "/" + Titulo)
 
         let LetraArray = Letra.split("\n");
 
-        console.log(Letra);
-
         document.querySelector("#Tema").innerHTML = "'" + Titulo + "' por " + Artista;
 
         Create_Couplet(3,LetraArray);
@@ -48,8 +46,6 @@ function Create_Couplet(N,LetraArray)
     var i;
     for(let i=0;i<N;i++)
         {
-            console.log(LetraArray);
-
             let NewCouplet = coupletCopia.cloneNode(true);
             lyrics.appendChild(NewCouplet);
             let NewArray = Create_Line(LetraArray.indexOf(""),LetraArray,NewCouplet);
