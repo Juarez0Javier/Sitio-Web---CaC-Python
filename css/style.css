@@ -7,6 +7,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    font-family: "Roboto";
 }
 
 .secondary-header {
@@ -91,6 +93,7 @@ iframe#map {
 footer {
     background-color: #241609;
     padding: 20px;
+    text-align: center;
 }
 
 footer p {

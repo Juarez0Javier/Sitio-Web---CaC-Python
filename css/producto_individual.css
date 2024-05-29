@@ -6,7 +6,7 @@
     font-weight: 300;
     font-style: normal;
 }
-i{
+.otros>h2>i{
     color: rgb(61, 61, 61);
     transition: 0.2s all;
 }
