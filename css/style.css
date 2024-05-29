@@ -70,11 +70,6 @@ body {
 footer {
     background-color: #241609;
     padding: 20px;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 30px;
-    align-items: center;
-    text-align: center;
 }
 footer p {
     margin: 0;
