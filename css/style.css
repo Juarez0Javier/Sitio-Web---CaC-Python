@@ -78,29 +78,6 @@ footer p {
     color: #e4d6c9;
     font-size: 16px;
 }
-iframe#map {
-    grid-column: 1 / span 3;
-    width: 80%;
-    height: 250px;
-    margin: auto;
-    display: block;
-}
-.direccion {
-    grid-column: 1 / span 3;
-}
-
-/*footer*/
-footer {
-    background-color: #241609;
-    padding: 20px;
-    text-align: center;
-}
-
-footer p {
-    margin: 0;
-    color: #e4d6c9;
-    font-size: 17px;
-}
 
 #Socials>a{
     color: #ffffff;
