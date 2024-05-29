@@ -97,8 +97,9 @@ h2{
 .boton_compra, .boton_carrito{
     border: none;
     font-weight: 700;
-    background-color: rgb(173, 173, 173);
-    border-radius: 10px;
+    background-color: #301b08; 
+    color: #e4d6c9;
+    border-radius: 8px;
     transition: 0.2s all;
     font-size: 0.8em;
     padding: 2%;
@@ -108,7 +109,7 @@ h2{
 }
 
 .boton_compra:hover, .boton_carrito:hover{
-    background-color: rgb(123, 123, 238);
+    background-color: #66492e; 
     border-radius: 0;
 }
 
@@ -119,6 +120,9 @@ h2{
     border-bottom: 1px solid rgba(37, 37, 37, 0.473);
     padding: 4px;
     
+}
+#two>p{
+    font-size: 0.8em;
 }
 
 /*SECCION 3 INICIO*/
@@ -164,18 +168,23 @@ a:link, a:visited{
     width: 100%;
     height: 40%;
     text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    
   }
   
   .titulo_miniatura {
-    font-size: 1.2em;
+    font-size: 0.9em;
     margin: 0;
-    font-weight: 100;
+    font-weight: bold;
     
   }
   
   .precio_miniatura {
     margin: 5px 0;
-    font-weight: 100;
+    
   }
 
   @media only screen and (min-width: 1000px){
