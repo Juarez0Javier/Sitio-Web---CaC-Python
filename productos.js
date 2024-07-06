@@ -1,5 +1,5 @@
 function fetchProducts() {
-    fetch("http://localhost:5000/products")
+    fetch("http://localhost:5000/api/products/all/")
         .then(response => response.json())
         .then(data => {
             data.forEach(product => {
@@ -16,12 +16,12 @@ function fetchProducts() {
 }
 
 function buyProduct(productId, newStock) {
-    fetch("http://localhost:5000/buy_product", {
-        method: 'POST',
+    fetch(`http://localhost:5000/api/products/refresh_stock/${productId}`, {
+        method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ id: productId, new_stock: newStock })
+        body: JSON.stringify({ new_stock: newStock })
     })
     .then(response => response.json())
     .then(data => {
