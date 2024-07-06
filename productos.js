@@ -5,9 +5,9 @@ function fetchProducts() {
             data.forEach(product => {
                 let productElement = document.createElement("div");
                 productElement.innerHTML = `
-                    <p>Nombre: ${product[1]}</p>
-                    <p>Precio: $${product[2]}</p>
-                    <p>Stock: ${product[3]}</p>
+                    <p>Nombre: ${product.nombre}</p>
+                    <p>Precio: $${product.price}</p>
+                    <p>Stock: ${product.stock}</p>
                 `;
                 document.getElementById("productContainer").appendChild(productElement);
             });
@@ -21,7 +21,7 @@ function buyProduct(productId, newStock) {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ new_stock: newStock })
+        body: JSON.stringify({ stock: newStock })
     })
     .then(response => response.json())
     .then(data => {
