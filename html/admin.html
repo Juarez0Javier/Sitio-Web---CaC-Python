@@ -6,17 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
 
-
     <link rel="stylesheet" href="../css/form_styles.css">
 
-
     <script src="https://kit.fontawesome.com/4e5d6fb4ca.js" crossorigin="anonymous"></script>
-
-    <script src="../js/validate_form.js" crossorigin="anonymous"></script>
 
     <title>Contacto</title>
 
     <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+
+    <script src="../js/fetchData.js"></script>
+    <script src="../js/admin_prod.js"></script>
 
 </head>
 
@@ -42,6 +41,27 @@
 
     <main>
 
+        <h1>Listado de Productos</h1>
+
+        <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Nombre Largo</th>
+            <th>Imagen</th>
+            <th>Descripcion</th>
+            <th>Precio</th>
+            <th>Stock</th>
+        </tr>
+        <tr>
+            <td>Nombre</td>
+            <td>Nombre_Largo</td>
+            <td><img src="" alt="Imagen"></td>
+            <td>Descripcion</td>
+            <td>Precio</td>
+            <td>Stock</td>
+        </tr>
+        </table>
+    <!--
         <p id="form-title">Complete los siguientes campos y reponderemos su consulta a la brevedad!</p>
         <div class="consultas">
             <form name="consulta" onsubmit="return Validate_Form()">
@@ -88,6 +108,7 @@
                 </div>
             </form>
         </div>
+    -->
     </main>
 
     <footer>
@@ -98,5 +119,6 @@
         <p>© 2024 Crescendo </p>
         <a href="./admin.html">Administrador</a>
     </footer>
+
 </body>
 </html>
