@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/productos.css">
+    <script src="https://kit.fontawesome.com/4e5d6fb4ca.js" crossorigin="anonymous"></script>
+
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    
+    <title>Producto</title>
+</head>
+
+<body>
+
+    <div class="secondary-header">
+        <div class="content"> 
+            <span style="font-weight: bold;">Envío gratis en compras a partir de $30.000</span>
+        </div>
+    </div>
+    
+    <header id="header"> 
+        <a href="./index.html" class="logo">
+            <img src="../img/logo.png" alt="logo">
+        </a>
+        <nav class="navbar">
+            <a href="./index.html">Inicio</a>
+            <a href="./productos.html">Productos</a>
+            <a href="./informacion.html">Información</a>
+            <a href="./contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="one">
+            <div class="picture">
+                <img id="productImage" src="../img/default.jpg" alt="Producto">
+            </div>
+
+            <div class="info_principal">
+                <div class="title">
+                    <h2 id="productName">Nombre del Producto</h2>
+                </div>
+
+                <fieldset class="dinero">
+                    <legend>Precio</legend>
+                    <h2 id="productPrice">0$</h2>
+                    <p>12 cuotas sin interes de </p>
+                    <h2>40.200$ <a href="#" class="cuotas">Ver cuotas</a></h2>
+                </fieldset>
+
+                <div class="otros">
+                    <h2>Garantia de 12 meses <i class='bx bx-check-shield bx-tada-hover'></i></h2>
+                    <h2 id="productStock">Stock disponible: <i class='bx bx-check-square'></i></h2>
+                    <h2>Envios a todo el pais <i class='bx bxs-truck bx-fade-right-hover'></i></h2>
+                </div>
+
+                <form class="botones" onsubmit="event.preventDefault(); buyProduct(product_id, product_stock - 1);">
+                    <input type="submit" value="COMPRAR" class="boton_compra">
+                </form>
+            </div>
+        </section>
+
+        <section id="two">
+            <h2>Descripcion:</h2>
+            <p id="productDescription">
+                Descripción del producto.
+            </p>
+        </section>
+
+        <section>
+            <h2 id="threeRe">Recomendaciones:</h2>
+            <div id="three">
+                <!-- Recomendaciones se cargarán aquí -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Seguinos en las redes</p> <br>
+        <p id="Socials"><a href="https://www.x.com" target="_blank"><i class="fa-brands fa-x-twitter fa-2x"></i></a> <a href="https://www.facebook.com"
+                target="_blank"><i class="fa-brands fa-square-facebook fa-2x"></i></a> <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram fa-2x"></i></a> <a
+                href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube fa-2x"></i></a></p><br>
+        <p>© 2024 Crescendo </p>
+    </footer>
+
+    <script src="../js/productos.js"></script>
+</body>
+
+</html>
