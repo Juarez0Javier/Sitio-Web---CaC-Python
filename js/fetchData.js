@@ -1,6 +1,5 @@
 function  fetchData(url, method, callback, data_request = null) {
     const options = {
-        mode: 'no-cors',
         method: method,
         headers: {
             'Content-Type': 'application/json',

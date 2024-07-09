@@ -1,66 +1,74 @@
-/*let TituloArray = ["En la Ciudad de la Furia","The Scientist","Eleanor Rigby"];
-let ArtistaArray = ["Soda Stereo","Coldplay", "The Beatles"];
-
-let linea = document.querySelector("#Linea");
-let lineaCopia = linea.cloneNode(true);
-
-linea.remove();
-
-let couplet = document.querySelector("#Couplet");
-let coupletCopia = couplet.cloneNode(true);
-
-couplet.remove();
-
-let lyrics = document.querySelector("#Lyrics");
+//The server's url
+let BASE_URL = "http://localhost:5000"
 
 
-let Titulo = TituloArray[CH];
-let Artista = ArtistaArray[CH];*/
+let product = document.querySelector(".Prod");
+let productCopia = product.cloneNode(true);
+
+product.remove();
 
 
-fetch("http://127.0.0.1:5000/api/products/all/")
-.then (response => response.json())
-.then(data =>
-    {
-        print(data)
+let prod_con = document.querySelector(".Prod_Listing");
 
-        /*let Letra = data.lyrics;
 
-        Letra = Letra.replaceAll("\n\n","\n");
 
-        let LetraArray = Letra.split("\n");
 
-        document.querySelector("#Tema").innerHTML = "'" + Titulo + "' por " + Artista;
+function Get_All_Products(){
+    fetchData(BASE_URL + "/api/products/all/", "GET", (data) => {
 
-        Create_Couplet(3,LetraArray);*/
 
-    }
-)
-.catch(error=>console.log(error));
+        for (let product of data) {
+            
+            let newProd = productCopia.cloneNode(true);
 
-/*function Create_Couplet(N,LetraArray)
-{
-    var i;
-    for(let i=0;i<N;i++)
-        {
-            let NewCouplet = coupletCopia.cloneNode(true);
-            lyrics.appendChild(NewCouplet);
-            let NewArray = Create_Line(LetraArray.indexOf(""),LetraArray,NewCouplet);
-            LetraArray.length = 0;         
-            LetraArray.push.apply(LetraArray, NewArray);
+            newProd.querySelector(".name").innerHTML = product.nombre;
+            newProd.querySelector(".l_name").innerHTML = product.long_name;
+
+            let Image = newProd.querySelector(".image>img");
+            Image.setAttribute("src", product.imagen);
+            Image.setAttribute("class", "miniatura");
+
+            newProd.querySelector(".descr").innerHTML = product.descripcion;
+            newProd.querySelector(".price").innerHTML = "$" + product.precio;
+
+            let Stock = newProd.querySelector(".stock");
+
+            if(product.stock == -1)
+                Stock.innerHTML = "Descontinuado";
+            else if (product.stock == 0)
+                Stock.innerHTML = "Agotado";
+            else
+                Stock.innerHTML = product.stock;
+
+            let discontinueProduct = newProd.querySelector(".borrar");
+            let modifyProduct = newProd.querySelector(".modi");
+
+            discontinueProduct.addEventListener("click",Discontinue_Product);
+            discontinueProduct.id = product.id;
+
+            modifyProduct.addEventListener("click",Modify_Product);
+            modifyProduct.id = product.id;
+            
+            prod_con.appendChild(newProd);
         }
-    
-};
+    });
+}
 
-function Create_Line(N, LetraArray, Couplet)
+function Discontinue_Product(event)
 {
-    var i;
-    for(i=0;i<N;i++)
-        {
-            let NewLine = lineaCopia.cloneNode(true);
-            NewLine.innerHTML = LetraArray[i];
-            Couplet.appendChild(NewLine);
-        }
-        
-    return LetraArray.slice(i+1,LetraArray.lenght);
-};*/
+    let id = event.currentTarget.id;
+
+    let url = BASE_URL + '/api/products/delete/' + id;
+
+    fetchData(url, "DELETE", () => {
+        location.reload();
+    });
+}
+
+function Modify_Product(event)
+{
+    let id = event.currentTarget.id;
+    window.location.replace("product_edit.html?prod_id=" + id);
+}
+
+Get_All_Products();

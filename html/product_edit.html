@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/admin.css">
+
+
+    <link rel="stylesheet" href="../css/form_styles.css">
+
 
     <script src="https://kit.fontawesome.com/4e5d6fb4ca.js" crossorigin="anonymous"></script>
 
@@ -37,30 +40,39 @@
 
     <main>
 
-        <h1>Listado de Productos</h1>
+        <p id="form-title">Ingresar Nuevo Producto</p>
+        <div class="consultas">
+            <form name="consulta" onsubmit = "return false">
+                <div class="grid-con">
+                    <div class="entry">
+                        <label for="Name"> Nombre </label> <br>
+                        <input class="textbox" id="Name" type="text">
+                    </div>
 
-        <table class="Prod_Listing">
-        <tr>
-            <th>Nombre</th>
-            <th>Nombre Largo</th>
-            <th>Imagen</th>
-            <th>Descripcion</th>
-            <th>Precio</th>
-            <th>Stock</th>
-        </tr>
-        <tr class="Prod">
-            <td class = "name">Nombre</td>
-            <td class = "l_name">Nombre_Largo</td>
-            <td class = "image"><img alt="Imagen"></td>
-            <td class = "descr">Descripcion</td>
-            <td class = "price">Precio</td>
-            <td class = "stock">Stock</td>
-            <td><button class= "borrar">Descontinuar</button></td>
-            <td><button class= "modi">Modificar</button></td>
-        </tr>
-    </table>
-        <a href="product_edit.html"><button>Nuevo</button></a>
+                    <div class="entry">
+                        <label for="LongName"> Nombre Largo </label> <br>
+                        <input class="textbox" id="LongName" type="text">
+                    </div>
 
+                    <div class="entry">
+                        <label for="Price"> Precio </label><br>
+                        <input class="textbox" id="Price" type="text">
+                    </div>
+
+                    <div class="entry">
+                        <label for="Stock"> Stock </label><br>
+                        <input class="textbox" id="Stock" type="text">
+                    </div>
+
+                    <div class="entry" style="grid-column: 1 / span 2;">
+                        <label for="Description"> Descripcion </label><br>
+                        <textarea style="height:175px; text-align:start" id="Description" class="textbox"></textarea>
+                    </div>
+
+                    <input id="form-button" type="submit" value="Aceptar">
+                </div>
+            </form>
+        </div>
     </main>
 
     <footer>
@@ -72,10 +84,8 @@
         <a href="./admin.html">Administrador</a>
     </footer>
 
-    <!-- Scripts Section-->
-
     <script src="../js/fetchData.js"></script>
-    <script src="../js/admin_prod.js"></script>
+    <script src="../js/prod_edit.js"></script>
 
 </body>
 </html>
