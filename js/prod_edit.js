@@ -8,12 +8,42 @@ let submitButton = Form.querySelector("#form-button");
 let params = new URLSearchParams(document.location.search);
 let prod_id = params.get("prod_id");
 
+console.log(prod_id);
+
+add_or_update();
+
+function add_or_update(){
+    if(prod_id !== null) {
+        document.querySelector("#form-title").innerHTML = "Editar Producto";
+
+        set_form_readOnly(true);
+
+
+        let url = BASE_URL + '/api/products/' + prod_id;
+        fetchData(url, "GET", (data) => {
+
+            Form.querySelector(".entry>#Name").value = data.name;
+            Form.querySelector(".entry>#LongName").value = data.l_name;
+            Form.querySelector(".entry>#Description").value = data.desc;
+            Form.querySelector(".entry>#Price").value = data.price; 
+            Form.querySelector(".entry>#Stock").value = data.stock;
+
+            set_form_readOnly(false);
+        });
+
+        submitButton.addEventListener("click", update_prod);
+    } else {
+        submitButton.addEventListener("click", add_prod);
+    }
+}
+
 function add_prod(event) {
     let data = {
-        'nombre': Form.querySelector(".entry>#Name").value,
-        'long name': Form.querySelector(".entry>#LongName").value,
-        'descripcion': Form.querySelector(".entry>#Description").value,
-        'precio': Form.querySelector(".entry>#Price").value,
+        'name': Form.querySelector(".entry>#Name").value,
+        'l_name': Form.querySelector(".entry>#LongName").value,
+        'image': "../img/prods/default.png",
+        'desc': Form.querySelector(".entry>#Description").value,
+        'price': Form.querySelector(".entry>#Price").value,
         'stock': Form.querySelector(".entry>#Stock").value
     }
 
@@ -27,11 +57,18 @@ function add_prod(event) {
 }
 
 function update_prod(event) {
+    
+    let image = "../img/prods/" + Form.querySelector(".entry>#Name").value.toLowerCase() + ".png"
+
+    console.log(image);
+    
     let data = {
-        'nombre': Form.querySelector(".entry>#Name").value,
-        'long name': Form.querySelector(".entry>#LongName").value,
-        'descripcion': Form.querySelector(".entry>#Description").value,
-        'precio': Form.querySelector(".entry>#Price").value,
+
+        'name': Form.querySelector(".entry>#Name").value,
+        'l_name': Form.querySelector(".entry>#LongName").value,
+        'image': image,
+        'desc': Form.querySelector(".entry>#Description").value,
+        'price': Form.querySelector(".entry>#Price").value,
         'stock': Form.querySelector(".entry>#Stock").value
     }
 
@@ -50,29 +87,3 @@ function set_form_readOnly(value) {
         input.readOnly = value;
     }
 }
-
-function add_or_update(){
-    if(prod_id !== null) {
-        document.querySelector("#form-title").innerHTML = "Editar Producto";
-
-        set_form_readOnly(true);
-
-        let url = BASE_URL + '/api/products/' + prod_id;
-        fetchData(url, "GET", (data) => {
-
-            Form.querySelector(".entry>#Name").value = data.nombre;
-            Form.querySelector(".entry>#LongName").value = data.long_name;
-            Form.querySelector(".entry>#Description").value = data.descripcion;
-            Form.querySelector(".entry>#Price").value = data.precio; 
-            Form.querySelector(".entry>#Stock").value = data.stock;
-
-            set_form_readOnly(false);
-        });
-
-        submitButton.addEventListener("click", update_prod);
-    } else {
-        submitButton.addEventListener("click", add_prod);
-    }
-}
-
-add_or_update();

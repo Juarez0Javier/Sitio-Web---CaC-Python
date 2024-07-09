@@ -21,15 +21,15 @@ function Get_All_Products(){
             
             let newProd = productCopia.cloneNode(true);
 
-            newProd.querySelector(".name").innerHTML = product.nombre;
-            newProd.querySelector(".l_name").innerHTML = product.long_name;
+            newProd.querySelector(".name").innerHTML = product.name;
+            newProd.querySelector(".l_name").innerHTML = product.l_name;
 
             let Image = newProd.querySelector(".image>img");
-            Image.setAttribute("src", product.imagen);
+            Image.setAttribute("src", product.image);
             Image.setAttribute("class", "miniatura");
 
-            newProd.querySelector(".descr").innerHTML = product.descripcion;
-            newProd.querySelector(".price").innerHTML = "$" + product.precio;
+            newProd.querySelector(".descr").innerHTML = product.desc;
+            newProd.querySelector(".price").innerHTML = "$" + product.price;
 
             let Stock = newProd.querySelector(".stock");
 
@@ -58,11 +58,14 @@ function Discontinue_Product(event)
 {
     let id = event.currentTarget.id;
 
-    let url = BASE_URL + '/api/products/delete/' + id;
+    let url = BASE_URL + '/api/products/discont/' + id;
+
+    console.log(url);
 
     fetchData(url, "DELETE", () => {
         location.reload();
     });
+
 }
 
 function Modify_Product(event)

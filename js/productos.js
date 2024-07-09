@@ -21,10 +21,10 @@ function fetchProducts() {
                 productElement.innerHTML = `
                     <a href="producto.html?prod_id=${product.id}" class="producto_link">
                         <article class="article">
-                            <img class="miniatura" src="${product.imagen}" alt="${product.nombre}" >
+                            <img class="miniatura" src="${product.image}" alt="${product.name}" >
                             <div class="contenido">
-                                <h3 class="titulo">${product.nombre}</h3>
-                                <p class="precio">$${product.precio}</p>
+                                <h3 class="titulo">${product.name}</h3>
+                                <p class="precio">$${product.price}</p>
                                 <p class="stock">Stock: ${product.stock}</p>
                             </div>
                         </article>
@@ -46,12 +46,12 @@ function fetchProductDetails(prod_id) {
             const productStock = document.getElementById("productStock");
             const productDescription = document.getElementById("productDescription");
 
-            productImage.src = product.imagen;
-            productImage.alt = product.nombre;
-            productName.textContent = product.nombre;
-            productPrice.textContent = `$${product.precio}`;
+            productImage.src = product.image;
+            productImage.alt = product.name;
+            productName.textContent = product.name;
+            productPrice.textContent = `$${product.price}`;
             productStock.innerHTML = `Stock disponible: ${product.stock > 0 ? '<i class="bx bx-check-square"></i>' : 'Agotado'}`;
-            productDescription.textContent = product.descripcion;
+            productDescription.textContent = product.desc;
         })
         .catch(error => console.log("Ocurrió un error! " + error));
 }
@@ -73,10 +73,10 @@ function fetchRandomProducts(currentProductId) {
                     productElement.href = `producto.html?prod_id=${product.id}`;
                     productElement.innerHTML = `
                         <article class="article">
-                            <img class="miniatura" src="${product.imagen}" alt="${product.nombre}">
+                            <img class="miniatura" src="${product.imag}" alt="${product.name}">
                             <div class="contenido">
-                                <h3 class="titulo_miniatura">${product.nombre}</h3>
-                                <p class="precio_miniatura">$${product.precio}</p>
+                                <h3 class="titulo_miniatura">${product.name}</h3>
+                                <p class="precio_miniatura">$${product.price}</p>
                             </div>
                         </article>
                     `;

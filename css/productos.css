@@ -24,7 +24,9 @@
     border-radius: 10px;
     background-color: rgb(244, 181, 98);
     border: 1.5px solid #241609;
-    flex: 1; /* tengan todo el width posible equitativamente */
+    flex: 1; 
+    
+    /* tengan todo el width posible equitativamente */
 }
 
 .article {
