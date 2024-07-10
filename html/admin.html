@@ -32,34 +32,41 @@
             <a href="./productos.html">Productos</a>
             <a href="./informacion.html">Información</a>
             <a href="./contacto.html">Contacto</a>
+            <a href="./admin.html"><i class="fa-solid fa-gears"></i></a>
         </nav>
     </header>
 
     <main>
 
-        <h1>Listado de Productos</h1>
+        <h1 style="margin: 12px;">Listado de Productos</h1>
 
         <table class="Prod_Listing">
         <tr>
-            <th>Nombre</th>
-            <th>Nombre Largo</th>
-            <th>Imagen</th>
-            <th>Descripcion</th>
-            <th>Precio</th>
-            <th>Stock</th>
+            <th >Nombre</th>
+            <th >Nombre Completo</th>
+            <th >Imagen</th>
+            <th >Descripcion</th>
+            <th >Precio</th>
+            <th >Stock</th>
+            <th >Acciones</th>
         </tr>
         <tr class="Prod">
-            <td class = "name">Nombre</td>
-            <td class = "l_name">Nombre_Largo</td>
+            <td class = "name" style="padding: 5px;">Nombre</td>
+            <td class = "l_name" style="padding: 5px;">Nombre_Largo</td>
             <td class = "image"><img src="../img/prods/default.png" alt="Imagen"></td>
-            <td class = "descr">Descripcion</td>
-            <td class = "price">Precio</td>
-            <td class = "stock">Stock</td>
-            <td><button class= "borrar">Descontinuar</button></td>
-            <td><button class= "modi">Modificar</button></td>
+            <td class = "descr" style="padding: 5px;">Descripcion</td>
+            <td class = "price" style="padding: 5px;">Precio</td>
+            <td class = "stock" style="text-align: center;  padding: 5px;">Stock</td>
+            <td>
+
+            <button id= "modi" class="admin-button">Modificar</button>
+            <br>
+            <button id= "borrar" class="admin-button">Descontinuar</button> 
+
+        </td>    
         </tr>
     </table>
-        <a href="product_edit.html"><button>Nuevo</button></a>
+        <a href="product_edit.html"> <button class="admin-button">Nuevo</button></a>
 
     </main>
 

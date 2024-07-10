@@ -2,3 +2,39 @@
     width: 100%;
     height: 60%;
 }
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+.admin-button {
+
+    cursor: pointer;
+    
+    width: 110px;
+    height: 50px;
+
+    margin: 12px;
+
+    border-radius: 30px;
+    background-color: #5c554d;
+    color: white;
+    border: 0px;
+    font-size: 17px;
+}
+
+.false_button {
+
+    
+    width: 110px;
+    height: 50px;
+
+    margin: 12px;
+
+    border-radius: 30px;
+    background-color: #3f3939;
+    color: rgb(255, 255, 255);
+    border: 0px;
+    font-size: 17px;
+}

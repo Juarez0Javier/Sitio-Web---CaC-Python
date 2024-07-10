@@ -1,14 +1,17 @@
-#productos {
-    height: 350px;
-    margin: 10%;
-    display: flex; /* flex padre q afecta a los hijos */
-    border: none;
-    /*flex-direction: column;*/
-    justify-content: space-evenly;
-}
-
 .producto_link {
     text-decoration: none;
+    overflow: hidden;
+}
+
+#productContainer
+{
+    display: grid;
+    column-gap: 30px;
+    row-gap: 30px;
+    grid-template-columns: repeat(3, auto);
+
+    margin: 50px;
+
 }
 
 .producto_link:link, .producto_link:visited {
@@ -16,17 +19,14 @@
 }
 
 .article  {
-    margin-top: 50px;
-    margin-bottom: 120px;
+    margin-bottom: 0px;
     margin-left: 1%;
     margin-right: 1%;
     height: 100%;
-    border-radius: 10px;
+    border-radius: 0px;
     background-color: rgb(244, 181, 98);
     border: 1.5px solid #241609;
-    flex: 1; 
-    
-    /* tengan todo el width posible equitativamente */
+    flex: 1;
 }
 
 .article {

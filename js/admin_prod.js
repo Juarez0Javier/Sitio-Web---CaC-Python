@@ -33,18 +33,32 @@ function Get_All_Products(){
 
             let Stock = newProd.querySelector(".stock");
 
+            let discontinueProduct = newProd.querySelector("#borrar");
+            let modifyProduct = newProd.querySelector("#modi");
+            
+            
             if(product.stock == -1)
+            {
                 Stock.innerHTML = "Descontinuado";
-            else if (product.stock == 0)
-                Stock.innerHTML = "Agotado";
-            else
-                Stock.innerHTML = product.stock;
+                discontinueProduct.setAttribute("class","false_button")
+            }
+            else 
+            {
+                
+                discontinueProduct.addEventListener("click",Discontinue_Product);
+                discontinueProduct.id = product.id;
 
-            let discontinueProduct = newProd.querySelector(".borrar");
-            let modifyProduct = newProd.querySelector(".modi");
+                if (product.stock == 0)
+                    Stock.innerHTML = "Agotado";
+                else
+                    Stock.innerHTML = product.stock;
+            }
+            
 
-            discontinueProduct.addEventListener("click",Discontinue_Product);
-            discontinueProduct.id = product.id;
+            
+            
+
+            
 
             modifyProduct.addEventListener("click",Modify_Product);
             modifyProduct.id = product.id;
