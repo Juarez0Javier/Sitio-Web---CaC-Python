@@ -54,10 +54,6 @@ function Get_All_Products(){
                     Stock.innerHTML = product.stock;
             }
             
-
-            
-            
-
             
 
             modifyProduct.addEventListener("click",Modify_Product);

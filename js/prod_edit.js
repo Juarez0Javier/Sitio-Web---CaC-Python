@@ -8,8 +8,6 @@ let submitButton = Form.querySelector("#form-button");
 let params = new URLSearchParams(document.location.search);
 let prod_id = params.get("prod_id");
 
-console.log(prod_id);
-
 add_or_update();
 
 function add_or_update(){
