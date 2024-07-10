@@ -19,7 +19,7 @@ function fetchCarousellProducts() {
     
     fetchData(BASE_URL + "/api/products/all/", "GET", (data) => {
         
-        const randomProducts = getRandomElements(data, 3);
+        const randomProducts = getRandomElements(data, 4);
 
 
         for (let product of randomProducts)

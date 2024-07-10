@@ -51,7 +51,7 @@ function fetchProductDetails(prod_id) {
 
             productImage.src = product.image;
             productImage.alt = product.name;
-            productName.textContent = product.name;
+            productName.textContent = product.l_name;
             productPrice.textContent = `$${product.price}`;
             productQuota.textContent = `$${(Math.round((product.price /12) * 100) / 100)}`;
             productStock.innerHTML = `Stock disponible: ${product.stock > 0 ? '<i class="bx bx-check-square"></i>' : 'Agotado'}`;
